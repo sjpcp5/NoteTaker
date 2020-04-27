@@ -21,13 +21,14 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/api/notes", function(req, res) {
+    console.log("A1");
     fs.readJSON(db)
       .then((db) => {
         console.log(db, "A");
         return res.json(db);
       })
       .catch((err) => {
-        res.status(400).json(err, "err A");
+        res.status(400).json(err);
       });
   });
 
