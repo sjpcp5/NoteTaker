@@ -11,7 +11,7 @@ var activeNote = {};
 var getNotes = function() {
   return $.ajax({
     url: "/api/notes",
-    method: "GET"
+    method: "GET",
   });
 };
 
@@ -20,7 +20,7 @@ var saveNote = function(note) {
   return $.ajax({
     url: "/api/notes",
     data: note,
-    method: "POST"
+    method: "POST",
   });
 };
 
@@ -28,7 +28,7 @@ var saveNote = function(note) {
 var deleteNote = function(id) {
   return $.ajax({
     url: "api/notes/" + id,
-    method: "DELETE"
+    method: "DELETE",
   });
 };
 
@@ -53,7 +53,7 @@ var renderActiveNote = function() {
 var handleNoteSave = function() {
   var newNote = {
     title: $noteTitle.val(),
-    text: $noteText.val()
+    text: $noteText.val(),
   };
 
   saveNote(newNote).then(function(data) {
@@ -112,10 +112,10 @@ var renderNoteList = function(notes) {
   for (var i = 0; i < notes.length; i++) {
     var note = notes[i];
 
-    var $li = $("<li class='list-group-item'>").data(note);
+    var $li = $(`<li class='list-group-item'>`).data(note);
     var $span = $("<span>").text(note.title);
     var $delBtn = $(
-      "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
+      `<i class='fas fa-trash-alt float-right text-danger delete-note'>`
     );
 
     $li.append($span, $delBtn);
