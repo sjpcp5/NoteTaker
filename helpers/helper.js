@@ -31,8 +31,8 @@ function writeJSONFile(filename, text) {
 }
 
 module.exports = {
-  getNewID,
   getDate,
   mustBeInArray,
   writeJSONFile,
+  getNewId,
 };
