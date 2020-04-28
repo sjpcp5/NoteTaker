@@ -5,7 +5,7 @@
 // ===============================================================================
 
 // const notes = require("../assets/js/index.js");
-const db = require("../db/note.json");
+const db = require("../db/notes.json");
 // const journal = require("../journal.json.js");
 const fs = require("fs-extra");
 
