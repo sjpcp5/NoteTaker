@@ -21,7 +21,7 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/api/notes", function(req, res) {
-    console.log("A1");
+    console.log("hello world");
     fs.readJSON(db)
       .then((db) => {
         console.log(db, "A");
