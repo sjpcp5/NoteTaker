@@ -18,10 +18,11 @@ function mustBeInArray(array, id) {
         status: 404,
       });
     }
+    resolve(row);
   });
 }
-function writeJSONFile(filename, text) {
-  fs.writeFileSync(filename, JSON.stringify(text), "utf8", (err) => {
+function writeJSONFile(filename, content) {
+  fs.writeFileSync(filename, JSON.stringify(content), "utf8", (err) => {
     if (err) {
       console.log(err);
       console.log("did not write to JSON file");

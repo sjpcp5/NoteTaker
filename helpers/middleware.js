@@ -10,9 +10,9 @@ function mustBeAnumber(req, res, next) {
 }
 
 function checkFieldsNotes(req, res, next) {
-  const { title, text, tags } = req.body;
+  const { title, text } = req.body;
 
-  if (title && text && tags) {
+  if (title && text) {
     next(); // pass control to next handler
   } else {
     res.status(400).json({ message: "fields do not match model" });

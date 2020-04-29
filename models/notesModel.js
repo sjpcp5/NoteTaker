@@ -1,6 +1,6 @@
-const filename = "../db/notes.json";
-let notes = require(filename);
-const helper = require("../helpers/helper");
+const filename = "../data/notes.json";
+const notes = require(filename);
+const helper = require("../helpers/helper.js");
 
 function getNotes() {
   return new Promise((resolve, reject) => {
