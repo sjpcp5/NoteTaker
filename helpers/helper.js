@@ -1,5 +1,4 @@
-const fs = require("fse");
-
+const fs = require("fs-extra");
 const getNewId = (array) => {
   if (array.length > 0) {
     return array[array.length - 1].id + 1;
