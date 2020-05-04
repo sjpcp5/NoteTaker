@@ -8,10 +8,9 @@ const middlewares = require('../helpers/middleware')
 module.exports = function (app) {
   // all notes
   app.get('/api/notes', async (req, res) => {
-    console.log('getPost A')
     await journal
       .getNotes()
-      .then(post => res.json(post))
+      .then(data => res.json(data))
       .catch(err => {
         if (err.status) {
           res.status(err.status).json({ message: err.message })
@@ -20,34 +19,21 @@ module.exports = function (app) {
         }
       })
   })
-  // get note
-  app.get('/api/notes/:id', middlewares.mustBeAnumber, async (req, res) => {
-    const id = req.params.id
 
-    await journal
-      .getPost(id)
-      .then(journal => res.json(journal))
-      .catch(err => {
-        if (err.status) {
-          res.status(err.status).json({ message: err.message })
-        } else {
-          res.status(500).json({ message: err.message })
-        }
-      })
-  })
   // insert new note
-  app.post('/api/notes', middlewares.checkFieldsNotes, async (req, res) => {
-    console.log(req.body, 'A')
-    await journal
+  app.post('/api/notes', middlewares.checkFieldsNotes, (req, res) => {
+    journal
       .insertNote(req.body)
-      .then(
-        journal => console.log(journal, 'C'),
+      .then(journal => {
         res.status(201).json({
           message: `You have written #${journal.id} yay!`,
           content: journal
         })
-      )
-      .catch(err => res.status(500).json({ message: err.message }))
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(500).json({ message: err.message })
+      })
   })
   // update notes
   // app.put("api/notes/:id", middlewares.mustBeAnumber, async (req, res) => {
@@ -55,4 +41,19 @@ module.exports = function (app) {
   // });
 
   // delete notes
+  app.delete('/api/notes/:id', middlewares.mustBeAnumber, (req, res) => {
+    const id = req.params.id
+    journal
+      .deleteNote(id)
+      .then(journal => {
+        res.json(202).json({
+          message: `You have deleted #${journal.id}`,
+          content: journal
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(500).json({ message: err.message })
+      })
+  })
 }
