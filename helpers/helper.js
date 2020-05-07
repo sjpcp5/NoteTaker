@@ -11,8 +11,6 @@ const getDate = () => new Date().toString()
 
 function mustBeInArray (array, id) {
   return new Promise((resolve, reject) => {
-    console.log(array, 'C')
-
     const row = array.find(r => r.id == id)
     if (!row) {
       reject({

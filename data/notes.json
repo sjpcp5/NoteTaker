@@ -22,23 +22,51 @@
   },
   {
     "id": 4,
-    "createdAt": "Thu Apr 30 2020 22:45:49 GMT-0500 (Central Daylight Time)",
-    "updatedAt": "Thu Apr 30 2020 22:45:49 GMT-0500 (Central Daylight Time)",
-    "title": "today",
-    "text": "there was alot accomplished today"
+    "createdAt": "Wed May 06 2020 19:05:40 GMT-0500 (Central Daylight Time)",
+    "updatedAt": "Wed May 06 2020 19:05:40 GMT-0500 (Central Daylight Time)",
+    "title": "React notes",
+    "text": "Writing a functional component enables ones to write fewer lines of code. Its manageable  and cleaner."
   },
   {
     "id": 5,
-    "createdAt": "Thu Apr 30 2020 22:58:27 GMT-0500 (Central Daylight Time)",
-    "updatedAt": "Thu Apr 30 2020 22:58:27 GMT-0500 (Central Daylight Time)",
-    "title": "Today wrote some code",
-    "text": "Now I keep writing code."
+    "createdAt": "Wed May 06 2020 19:10:13 GMT-0500 (Central Daylight Time)",
+    "updatedAt": "Wed May 06 2020 19:10:13 GMT-0500 (Central Daylight Time)",
+    "title": "A joke",
+    "text": "This is a dad joke I hear recently, \" What has garbage and flys?\" \n.....................\n..........................................\n.................                     _      \n\"A garbage truck O|O\"\n                                           _"
   },
   {
     "id": 6,
-    "createdAt": "Thu Apr 30 2020 23:16:12 GMT-0500 (Central Daylight Time)",
-    "updatedAt": "Thu Apr 30 2020 23:16:12 GMT-0500 (Central Daylight Time)",
-    "title": "Todo List",
-    "text": "Sleep\nfix this code \nrelax\ngo to work\nlaundry"
+    "createdAt": "Wed May 06 2020 19:12:17 GMT-0500 (Central Daylight Time)",
+    "updatedAt": "Wed May 06 2020 19:12:17 GMT-0500 (Central Daylight Time)",
+    "title": "notes to delete",
+    "text": "delete me "
+  },
+  {
+    "id": 7,
+    "createdAt": "Wed May 06 2020 19:13:19 GMT-0500 (Central Daylight Time)",
+    "updatedAt": "Wed May 06 2020 19:13:19 GMT-0500 (Central Daylight Time)",
+    "title": "more notes to delete",
+    "text": "give a man a fish you feed him for a day,\nteach a man to fish you feed him for a lifetime!"
+  },
+  {
+    "id": 8,
+    "createdAt": "Wed May 06 2020 19:13:53 GMT-0500 (Central Daylight Time)",
+    "updatedAt": "Wed May 06 2020 19:13:53 GMT-0500 (Central Daylight Time)",
+    "title": "Whacky sayings",
+    "text": "loose lips sink glass houses!"
+  },
+  {
+    "id": 9,
+    "createdAt": "Wed May 06 2020 19:15:54 GMT-0500 (Central Daylight Time)",
+    "updatedAt": "Wed May 06 2020 19:15:54 GMT-0500 (Central Daylight Time)",
+    "title": "ninth post",
+    "text": "\"Lorem Ipsum\""
+  },
+  {
+    "id": 10,
+    "createdAt": "Wed May 06 2020 19:16:11 GMT-0500 (Central Daylight Time)",
+    "updatedAt": "Wed May 06 2020 19:16:11 GMT-0500 (Central Daylight Time)",
+    "title": "tenth post",
+    "text": "\"Lorem Ipsum ten times\""
   }
 ]

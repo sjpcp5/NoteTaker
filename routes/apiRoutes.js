@@ -10,7 +10,7 @@ module.exports = function (app) {
   app.get('/api/notes', async (req, res) => {
     await journal
       .getNotes()
-      .then(data => res.json(data))
+      .then(journal => res.json(journal))
       .catch(err => {
         if (err.status) {
           res.status(err.status).json({ message: err.message })
@@ -47,8 +47,8 @@ module.exports = function (app) {
       .deleteNote(id)
       .then(journal => {
         res.json(202).json({
-          message: `You have deleted #${journal.id}`,
-          content: journal
+          // message: `You have deleted #${journal.id}`,
+          // content: journal
         })
       })
       .catch(err => {
