@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
 
 // Sets an initial port.
-var PORT = process.env.PORT || 8080
+var PORT = process.env.PORT || 3000
 
 // morgan token
 morgan.token('host', function (req, res) {
